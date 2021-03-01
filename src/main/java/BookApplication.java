@@ -34,7 +34,9 @@ public class BookApplication {
 
         publisher.setBooks(books);
 
-        em.persist(book);
+        em.getTransaction().begin();
+
+        em.persist(author);
 
         if (em.contains(book)) {
             System.out.println("Persisted successfully.");
@@ -57,6 +59,7 @@ public class BookApplication {
             System.out.println(newBook.getPublisher().getName());
         }
 
+        em.getTransaction().commit();
         em.close();
         emf.close();
     }

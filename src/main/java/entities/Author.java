@@ -19,7 +19,7 @@ public class Author {
         this.id = id;
     }
 
-    @ManyToMany(mappedBy = "authors")
+    @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     public Map<String, Book> getBooks() {
         return books;
     }

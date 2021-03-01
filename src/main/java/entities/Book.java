@@ -20,7 +20,7 @@ public class Book {
         this.id = id;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     public Publisher getPublisher() {
         return publisher;
     }
@@ -29,7 +29,7 @@ public class Book {
         this.publisher = publisher;
     }
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     public Map<String, Author> getAuthors() {
         return authors;
     }

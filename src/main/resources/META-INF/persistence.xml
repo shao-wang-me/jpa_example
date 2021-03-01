@@ -17,7 +17,7 @@
             <property name="eclipselink.create-ddl-jdbc-file-name" value="create_ddl.sql"/>
             <property name="eclipselink.drop-ddl-jdbc-file-name" value="drop_ddl.sql"/>
             <property name="eclipselink.ddl-generation.output-mode" value="both"/>
-            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <property name="eclipselink.logging.level" value="FINE"/>
         </properties>
     </persistence-unit>
 </persistence>

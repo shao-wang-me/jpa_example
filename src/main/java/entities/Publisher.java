@@ -19,7 +19,7 @@ public class Publisher {
         this.id = id;
     }
 
-    @OneToMany(mappedBy = "publisher")
+    @OneToMany(mappedBy = "publisher", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     public Map<String, Book> getBooks() {
         return books;
     }
